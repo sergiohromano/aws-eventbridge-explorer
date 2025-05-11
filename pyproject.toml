@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aws-eventbridge-explorer"
-version = "1.0.0"
+version = "1.0.3"
 description = "Where Events Meet Clarity - Interactive exploration tool for AWS EventBridge event buses, rules, and targets"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -47,11 +47,15 @@ dev = [
 "Bug Tracker" = "https://github.com/sergiohromano/aws-eventbridge-explorer/issues"
 
 [project.scripts]
-eventbridge-explorer = "main:main"
+eventbridge-explorer = "eventbridge.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "."}
 packages = ["eventbridge"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"eventbridge" = ["templates/*.html", "static/**/*"]
 
 [tool.black]
 line-length = 100
