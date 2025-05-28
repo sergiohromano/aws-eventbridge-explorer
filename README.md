@@ -26,10 +26,24 @@ This tool helps you visualize AWS EventBridge event buses and their rules as an 
 pip install aws-eventbridge-explorer
 ```
 
+### Using uvx (No Installation Required)
+
+Run directly without installing using `uvx`:
+
+```bash
+uvx --from aws-eventbridge-explorer eventbridge-explorer
+```
+
+With a specific AWS profile:
+
+```bash
+AWS_PROFILE=your-profile uvx --from aws-eventbridge-explorer eventbridge-explorer
+```
+
 ### From Source
 
 ```bash
-git clone https://github.com/sergiohromano/aws-eventbridge-explorer.git
+git clone https://github.com/glyphtek/aws-eventbridge-explorer.git
 cd aws-eventbridge-explorer
 pip install -e .
 ```
@@ -42,7 +56,42 @@ pip install -e .
 
 ## Usage
 
+### Basic Usage
+
 Run the application with the web interface:
+
+```bash
+eventbridge-explorer
+```
+
+### With Custom Port
+
+```bash
+eventbridge-explorer --port 8080
+```
+
+### With Specific AWS Profile
+
+```bash
+AWS_PROFILE=your-profile eventbridge-explorer
+```
+
+### Using uvx (No Installation)
+
+```bash
+# Basic usage
+uvx --from aws-eventbridge-explorer eventbridge-explorer
+
+# With specific AWS profile
+AWS_PROFILE=your-profile uvx --from aws-eventbridge-explorer eventbridge-explorer
+
+# With custom port
+uvx --from aws-eventbridge-explorer eventbridge-explorer --port 8080
+```
+
+### Legacy Method (main.py)
+
+You can also run using the main.py file:
 
 ```bash
 python main.py

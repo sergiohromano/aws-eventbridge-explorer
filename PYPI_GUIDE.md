@@ -4,7 +4,7 @@ This guide explains how to publish AWS EventBridge Explorer to PyPI.
 
 ## Repository Information
 
-- GitHub Repository: https://github.com/sergiohromano/aws-eventbridge-explorer
+- GitHub Repository: https://github.com/glyphtek/aws-eventbridge-explorer
 - Last Updated: 2025
 
 ## Prerequisites
